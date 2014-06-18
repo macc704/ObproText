@@ -1,0 +1,60 @@
+%%%%%%%% 第6章 %%%%%%%%%%
+\chapter{集合オブジェクトを利用した基本アルゴリズム}
+
+\section*{学習内容}
+ \begin{itemize}
+   \item 集合（入れ物）を利用した基本アルゴリズム（追加，削除，検索）について学習します．
+   \item ファイルの入出力について学習します．
+ \end{itemize}
+
+\clearpage
+
+\section{データ構造とアルゴリズム入門）}
+\ppt{sp05/DSAP_01.eps}
+\pptx{sp05/DSAP_02.eps}
+\pptx{sp05/DSAP_03.eps}
+\pptx{sp05/DSAP_04.eps}
+\pptx{sp05/DSAP_05.eps}
+\pptx{sp05/DSAP_06.eps}
+\pptx{sp05/DSAP_07.eps}
+\pptx{sp05/DSAP_08.eps}
+\pptx{sp05/DSAP_09.eps}
+\pptx{sp05/DSAP_10.eps}
+\pptx{sp05/DSAP_11.eps}
+\pptx{sp05/DSAP_12.eps}
+\pptx{sp05/DSAP_13.eps}
+
+\section{成績管理アプリケーション}
+\subsection{設計}
+\hcp{scale=0.7}{sp05/src/ScoreManager_main.eps}
+\hcp{scale=0.7}{sp05/src/ScoreManager_addScore.eps}
+\clearpage
+\hcp{scale=0.7}{sp05/src/ScoreManager_deleteScore.eps}
+\hcp{scale=0.7}{sp05/src/ScoreManager_searchScore.eps}
+\hcp{scale=0.7}{sp05/src/ScoreManager_showStatus.eps}
+\clearpage
+
+\subsection{実装(1):単純な集合}
+\code{sp05}{src}{ScoreManager1.java}
+\clearpage
+\subsection{実装(2):2つの集合による名前管理}
+\code{sp05}{src}{ScoreManager2.java}
+\clearpage
+\subsection{実装(3):辞書(Map)による名前管理}
+\code{sp05}{src}{ScoreManager3.java}
+
+\clearpage
+{Memo:}
+\clearpage
+\section{ファイルの入出力}
+\subsection{ファイルからの入力}
+\code{sp05}{src}{FileInputTest.java}
+\clearpage
+\subsection{ファイルへの出力}
+\code{sp05}{src}{FileOutputTest.java}
+\clearpage
+\subsection{集合の入出力（行区切りフォーマット）}
+\code{sp05}{src}{MultiDataFileIOTest1.java}
+\clearpage
+\subsection{集合の入出力（カンマ区切りフォーマット）}
+\code{sp05}{src}{MultiDataFileIOTest2.java}

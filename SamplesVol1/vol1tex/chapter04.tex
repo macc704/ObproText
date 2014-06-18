@@ -1,0 +1,74 @@
+%%%%%%%% 第4章 %%%%%%%%%%
+\chapter{構造化設計（２）入力-処理-出力を持つ関数の設計および解釈}
+
+\section*{学習目標}
+ \begin{itemize}
+   \item 入力-処理-出力を持つプログラムモジュール構造と設計について理解します．
+   \item メソッド（戻り値があり）を用いたプログラムの構造化について理解します．
+   \item 再帰のプログラムを理解します．
+ \end{itemize}
+
+\clearpage
+
+\section{戻り値を使ったプログラムの構造化（西暦和暦変換プログラムを例に）}
+\hcp{scale=1.0}{sp03/src/ConvertYearApplication.eps}
+\clearpage
+\subsection{実装(1) メソッドなし}
+\code{sp03}{src}{ConvertYearApplication1.java}
+\clearpage
+\subsection{実装(2) 1レベルをメソッド化}
+\code{sp03}{src}{ConvertYearApplication2.java}
+\clearpage
+\subsection{実装(3) 2レベルをメソッド化}
+\code{sp03}{src}{ConvertYearApplication3.java}
+\clearpage
+\subsection{実装(3)のトレース表}
+\pdf{0.5cm}{0.5cm}{sp03/trace/ConvertYearApplicationTrace_01.eps}
+
+\clearpage
+{Memo:}
+\clearpage
+
+\section{HCPチャートによる効果的な設計とは（三角形のプログラムを例に）}
+\subsection{設計(A)}
+\hcp{scale=1.0}{triangle_quiz/src/Triangle_レビュ前_MAIN.eps}
+\clearpage
+\subsection{設計(B)}
+\hcp{scale=1.0}{triangle_quiz/src/Triangle_レビュ後_MAIN.eps}
+\clearpage
+\subsection{実装(A)}
+\code{triangle_quiz}{src}{SizeOfTriangle1.java}
+\clearpage
+\subsection{実装(B)}
+\code{triangle_quiz}{src}{SizeOfTriangle2.java}
+
+\pptx{triangle_quiz/20041221HCPReviewAnswerbySugiura_01.eps}
+\pptx{triangle_quiz/20041221HCPReviewAnswerbySugiura_02.eps}
+\pptx{triangle_quiz/20041221HCPReviewAnswerbySugiura_03.eps}
+
+\clearpage
+
+\section{複数の戻り値を出力するには（三角形のプログラムを例に）}
+\subsection{三角形の面積を求めるプログラムのHCP(データ付き)}
+\hcp{scale=0.75}{triangle_quiz/src/Triangle_レビュ後データ付_MAIN.eps}
+\clearpage
+\subsection{実装(C) 戻り値を使わなくて良いところまでメソッド化}
+\code{triangle_quiz}{src}{SizeOfTriangle3.java}
+\clearpage
+\subsection{実装(D) グローバル変数の使用（禁止）}
+\code{triangle_quiz}{src}{SizeOfTriangle4.java}
+\clearpage
+\subsection{実装(E) クラスを使う}
+\code{triangle_quiz}{src}{SizeOfTriangle5.java}
+
+%\clearpage
+%\section{繰り返しの制御構造と実装}
+%\ppt{sp03/繰り返しの制御構造と実装_01.eps}
+
+\clearpage
+\section{再帰のプログラムと解釈}
+\subsection{コッホ曲線のプログラム}
+\code{sp03}{src}{Koch.java}
+\clearpage
+\subsection{トレース表}
+\pdf{0.5cm}{0.5cm}{sp03/trace/KochTrace_01.eps}

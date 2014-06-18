@@ -1,0 +1,53 @@
+\chapter{オブジェクトの状態と遷移の設計}
+
+\section*{学習内容}
+ \begin{itemize}
+   \item 状態遷移図を用いた設計について理解する
+ \end{itemize}
+\clearpage
+
+\section{講義資料}
+\ppt{oo02/lecture/OO02_01.eps}
+\pptx{oo02/lecture/OO02_02.eps}
+
+\clearpage
+\section{状態遷移図}
+	\diagram{scale=0.5}{日本語入力IMEの状態遷移図}{oo02-ime.eps}
+	\clearpage
+	
+\section{オブプロGUIライブラリを利用したイベントハンドリングプログラム}
+	\subsection{マウスとキーハンドリングのテストプログラム}
+		\code{oo02/src_examples}{MouseKeyHandlingTest}
+
+\clearpage
+\section{状態制御のプログラム方法}
+	\subsection{状態遷移（点滅）のサンプルプログラム（１）}
+		\diagram{scale=0.5}{BlinkRectangle1の状態遷移図}{oo02-sc1.eps}
+		\code{oo02/src_examples}{BlinkSample1}
+		\code{oo02/src_examples}{BlinkRectangle1}
+
+\clearpage
+	\subsection{状態遷移（点滅）のサンプルプログラム（２）}
+		\diagram{scale=0.5}{BlinkRectangle2の状態遷移図}{oo02-sc2.eps}
+		\code{oo02/src_examples}{BlinkSample2}
+		\code{oo02/src_examples}{BlinkRectangle2}
+
+\clearpage
+\section{シューティングゲームへの適用例}
+	\subsection{設計}
+		\diagram{scale=0.5}{PlayerAircraftクラスの状態遷移図}{oo02-s-sc1.eps}
+		\diagram{scale=0.5}{EnemyAircraftクラスの状態遷移図}{oo02-s-sc3.eps}
+\clearpage		
+		\diagram{scale=0.5}{Bulletクラスの状態遷移図}{oo02-s-sc2.eps}
+
+
+	\subsection{シューティングゲーム（１）（避けるだけのゲーム）}
+		\code{oo02/src_shooting}{ShootingGame1}
+		\code{oo02/src_shooting}{PlayerAircraft}
+		\code{oo02/src_shooting}{EnemyAircraft}		
+
+	\clearpage
+	\subsection{シューティングゲーム（２）（弾出し＆スムーズな自機操作）}
+		\code{oo02/src_shooting}{ShootingGame2}
+		\code{oo02/src_shooting}{Bullet}
+

@@ -1,0 +1,20 @@
+\title 星，または円を書くプログラム
+
+\space
+\space
+\space
+\space
+\data 図形
+\space
+\space
+\data 大きさ
+星，または円を書く
+	ユーザの入力を受け付ける
+		星にするか円にするかの入力を受け付ける \out 図形
+		大きさの入力を受け付ける \out 大きさ
+
+	\fork 図形を描く \in 図形
+		\branch 星の場合
+			星を書く \in 大きさ
+		\branch 円の場合
+			円を書く \in 大きさ

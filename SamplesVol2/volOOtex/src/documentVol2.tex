@@ -1,0 +1,65 @@
+\documentclass[10pt]{jsbook}
+
+\usepackage{oo_text}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% レイアウト設定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{2}
+\renewcommand{\prechaptername}{Lesson }
+\renewcommand{\postchaptername}{}
+\setcounter{chapter}{6} % from 7 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 表紙設定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\Huge{Obpro Samples Vol.2}\\
+	\vspace{1cm}
+	\LARGE{For 2011 (Lesson07-09)}	
+}
+
+\date{\today} % 表示
+\author{松澤 芳昭，　岡田 健} % 表示
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 本文
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\cleardoublepage
+
+%:Memo
+%\clearpage
+
+\setcounter{page}{1} 
+\pagestyle{plain}
+\pagenumbering{roman}
+\renewcommand{\contentsname}{目次}
+\tableofcontents
+
+\cleardoublepage
+
+\setcounter{page}{1} 
+\pagestyle{headings}
+\renewcommand{\thepage}{\arabic{page}}
+%\pagenumbering{arabic}
+
+%\layout
+\include{chapter01}
+\include{chapter02}
+\include{chapter03}
+
+\appendix
+\include{appendix01}
+\include{appendix02}
+
+\include{imprint}
+
+\end{document}

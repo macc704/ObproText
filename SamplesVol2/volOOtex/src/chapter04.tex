@@ -1,0 +1,53 @@
+\chapter{ポリモーフィズムを利用した完全なデータ抽象}
+
+\section*{学習内容}
+ \begin{itemize}
+   \item ポリモーフィズムの仕組みと利点欠点を理解する
+ \end{itemize}
+\clearpage
+
+\section{講義資料}
+\ppt{oo04/lecture/OO04_01.eps}
+\pptx{oo04/lecture/OO04_02.eps}
+\pptx{oo04/lecture/OO04_03.eps}
+\pptx{oo04/lecture/OO04_04.eps}
+
+\clearpage
+\section{ポリモーフィズムの機構の理解}
+		\subsection{サンプルプログラム（１）スーパークラスの型を使う}
+			\diagram{scale=0.75}{クラス構造}{oo04-poly0.eps}
+			\code{oo04/src_examples}{Example1}
+
+\clearpage	
+		\subsection{サンプルプログラム（２）（スーパクラス型の配列を使う）}		
+			\diagram{scale=0.75}{サンプル（２）クラス図}{oo04-poly1.eps}
+			\diagram{scale=0.75}{サンプル（２）オブジェクト図}{oo04-poly1-object.eps}			
+			\code{oo04/src_examples}{Example2}
+
+\clearpage				
+		\subsection{サンプルプログラム（３）（キャストのエラーについて）}
+			\errcode{oo04/src_examples}{Example3.java.error}
+			
+\clearpage				
+		\subsection{サンプルプログラム（４）（ダウンキャストについて）}
+			\code{oo04/src_examples}{Example4}
+			
+\clearpage				
+		\subsection{サンプルプログラム（５）（instanceof演算子）}
+			\code{oo04/src_examples}{Example5}
+
+\clearpage	
+\section{シューティングゲームへの適用例}
+		\subsection{設計}
+			\diagram{scale=0.75}{シューティングゲーム（４）クラス図}{oo04-shooting-class.eps}
+			\diagram{scale=0.75}{シューティングゲーム（４）オブジェクト図}{oo04-shooting-object.eps}
+
+\clearpage	
+		\subsection{シューティングゲーム（４）（ポリモーフィズム）}
+			\code{oo04/src_shooting}{ShootingGame4}
+			\code{oo04/src_shooting}{AnimationElement}
+			\code{oo04/src_shooting}{Background}
+			\code{oo04/src_shooting}{ShootingCharacter}
+			\code{oo04/src_shooting}{PlayerAircraft}
+			\code{oo04/src_shooting}{EnemyAircraft}
+			\code{oo04/src_shooting}{Bullet}

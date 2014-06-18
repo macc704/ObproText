@@ -1,0 +1,45 @@
+%%%%%%%% 第3章 %%%%%%%%%%
+\chapter{構造化設計（１）HCPチャートの導入と関数を使った実装および解釈}
+
+\section*{学習内容}
+ \begin{itemize}
+   \item プログラムの書法（コメントの付け方）を学習します． 
+   \item HCPチャートを用いた構造化設計について学習します．
+   \item メソッド（戻り値はなし）を用いたプログラムの構造化について学習します．
+ \end{itemize}
+
+\clearpage
+
+\section{プログラムの書法（コメントの付け方）}
+\pdf{1cm}{1cm}{comment_manual/コメントの付け方_01.eps}
+\pdfx{1cm}{1cm}{comment_manual/コメントの付け方_02.eps}
+\pdfx{1cm}{1cm}{comment_manual/コメントの付け方_03.eps}
+\pdfx{1cm}{1cm}{comment_manual/コメントの付け方_04.eps}
+\pdfx{1cm}{1cm}{comment_manual/コメントの付け方_05.eps}
+\pdfx{1cm}{1cm}{comment_manual/コメントの付け方_06.eps}
+\pdfx{1cm}{1cm}{comment_manual/コメントの付け方_07.eps}
+\pdfx{1cm}{1cm}{comment_manual/コメントの付け方_08.eps}
+
+\clearpage
+
+\section{HCPチャートの導入と書法}
+\ppt{sp02/HCPとは_01.eps}
+\pptx{sp02/HCPとは_02.eps}
+
+\clearpage
+
+\section{構造化の例（窓付きの絵を描くプログラム）}
+\subsection{設計}
+\hcp{scale=1.0}{sp02/src/HouseWithWindows.eps}
+\clearpage
+\subsection{実装(1) 関数を用いた構造化}
+\code{sp02}{src}{House01.java}
+\clearpage
+\subsection{実装(2) 引数を用いた関数の抽象化}
+\code{sp02}{src}{House02.java}
+\clearpage
+\subsection{実装(2) のトレース表}
+\pdf{0.5cm}{0.5cm}{sp02/trace/House02Trace_01.eps}
+\clearpage
+\subsection{実装(３) さらなる関数の抽象化}
+\code{sp02}{src}{House03.java}

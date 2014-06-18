@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% package Imporing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{jtygm} %フォント関係
+\usepackage{txfonts} %フォント関係
+\usepackage{ascmac}
+\usepackage{here}
+\usepackage{listings,jlisting} %コード
+
+\usepackage{layout} %\layout（レイアウトデバッグ表示）を使うため
+\usepackage[dvipdfm]{graphicx} %画像貼り付け dvipdfmxを使う場合でもdvipdfmをいれるようだ
+\usepackage{url} %URLの処理
+\usepackage{float}
+
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% レイアウト設定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newlength{\outsidemargin}
+\newlength{\insidemargin}
+\newlength{\headinglineext}
+\newlength{\vtopmargin}
+\newlength{\vbottommargin}
+\setlength{\outsidemargin}{2.2cm}
+\setlength{\insidemargin}{2.4cm}
+\setlength{\headinglineext}{0.75cm}
+\setlength{\vtopmargin}{1.5cm}
+\setlength{\vbottommargin}{2cm}
+
+\setlength{\voffset}{-1in} 
+\addtolength{\voffset}{\vtopmargin} 
+\setlength{\topmargin}{0pt} %Default 3pt
+\setlength{\headheight}{20pt} %Default 20pt
+\setlength{\headsep}{20pt} %Default 17pt
+
+\setlength{\textheight}{297mm} % A4 width
+\addtolength{\textheight}{-\vtopmargin}
+\addtolength{\textheight}{-\vbottommargin}
+\addtolength{\textheight}{-\topmargin}
+\addtolength{\textheight}{-\headheight}
+\addtolength{\textheight}{-\headsep}
+
+\setlength{\hoffset}{0pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+
+\setlength{\textwidth}{210mm} % A4 width
+\addtolength{\textwidth}{-\insidemargin}
+\addtolength{\textwidth}{-\outsidemargin}
+\setlength{\fullwidth}{\textwidth}
+\addtolength{\fullwidth}{\headinglineext}
+
+\setlength{\oddsidemargin}{\insidemargin}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{\outsidemargin}
+\addtolength{\evensidemargin}{-1in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% コマンド設定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\pdf}[3]{
+	\includegraphics[width=450pt,trim=#1 #2 #1 #2,clip]{../src/res/#3}
+}
+
+\newcommand{\pdfx}[3]{
+	\newpage
+	\pdf{#1}{#2}{#3}
+}
+
+%\textwidth=466pt
+\newcommand{\ppt}[1]{	
+	\includegraphics[width=450pt,trim=2cm 3cm 2cm 3cm,clip]{../src/res/#1}
+}
+
+\newcommand{\pptx}[1]{
+	\newpage
+	\ppt{#1}
+}
+
+\newcommand{\code}[2]{
+  \lstinputlisting[caption=#2.java,label=src:#1/#2]{../../#1/#2.java}
+}
+
+\newcommand{\errcode}[2]{
+  \lstinputlisting[caption=#2,label=src:#1]{../../#1/#2}
+}
+
+\newcommand{\diagram}[3]{
+	\begin{figure}[htbp]
+    	\begin{center}	
+		\includegraphics[#1]{../src/img/diagrams/#3}
+		\caption{#2}
+		\end{center}	
+	\end{figure}  
+}
+
+\newcommand{\hcp}[2]{
+	\vspace{0.3cm}
+	\includegraphics[#1]{../src/img/hcp/#2}\\
+	\vspace{0.3cm}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Listing設定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\lstlistingname}{リスト}
+\lstset{
+  language={Java},					%プログラミング言語
+  frame=single,							%枠
+  framesep=5pt,
+  tabsize=2,								%タブの大きさ
+  numbers=left,							%行番号
+  stepnumber=1,    
+  basicstyle={\ttfamily\small},	%フォントの設定
+  commentstyle={\ttfamily},
+  keywordstyle={\bfseries},
+  numberstyle={\ttfamily},  
+  stringstyle={\ttfamily},
+  columns=fullflexible,				%日本語を正しく表示するために必要
+  breaklines=true,						%はみ出した行を自動的に改行する
+  showstringspaces=false,			%スペースを表示しない
+  breakautoindent=true,
+  xleftmargin=1.5cm
+}
+
+

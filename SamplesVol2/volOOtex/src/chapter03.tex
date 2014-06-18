@@ -1,0 +1,65 @@
+\chapter{継承を利用した設計}
+
+\section*{学習内容}
+ \begin{itemize}
+   \item クラス図・オブジェクト図を書けるようになる
+   \item 継承の仕組みと利点欠点を理解する 
+ \end{itemize}
+\clearpage
+
+\section{講義資料}
+\ppt{oo03/lecture/OO03_01.eps}
+\pptx{oo03/lecture/OO03_02.eps}
+
+\clearpage
+\section{クラス/インスタンス構造の図解}
+
+		\subsection{サンプルプログラム（１）（インスタンス１つ）}
+			\diagram{scale=0.75}{サンプル１クラス図}{oo03-Example1-Class.eps}		
+			\diagram{scale=0.75}{サンプル１オブジェクト図}{oo03-Example1-Object.eps}						
+			\code{oo03/src_examples}{Example1}
+			\code{oo03/src_examples}{ClassA}			
+
+\clearpage
+		\subsection{サンプルプログラム（２）（複数のインスタンス）}
+			\diagram{scale=0.75}{サンプル２クラス図}{oo03-Example2-Class.eps}								
+			\diagram{scale=0.75}{サンプル２オブジェクト図}{oo03-Example2-Object.eps}			
+			\code{oo03/src_examples}{Example2}
+
+\clearpage
+\section{継承のプログラム機構}								
+
+		\subsection{サンプルプログラム（３）（継承）}			
+			\diagram{scale=0.75}{サンプル３クラス図}{oo03-Example3-Class.eps}
+\clearpage							
+			\diagram{scale=0.75}{サンプル３オブジェクト図}{oo03-Example3-Object.eps}
+
+			\code{oo03/src_examples}{Example3}
+%			\code{oo03/src_examples}{ClassA}
+			\code{oo03/src_examples}{ClassB}
+			\code{oo03/src_examples}{ClassC}
+			\code{oo03/src_examples}{ClassD}
+\clearpage
+\section{シューティングゲームへの適用例}
+	\subsection{設計}
+			\diagram{scale=0.75}{シューティングゲーム（２）のクラス図}{oo03-Shooting2-Class.eps}
+			\diagram{scale=0.75}{シューティングゲーム（２）のオブジェクト図}{oo03-Shooting2-Object.eps}
+			\diagram{scale=0.75}{シューティングゲーム（３）のクラス図}{oo03-Shooting3-Class.eps}
+			\diagram{scale=0.75}{シューティングゲーム（３）のオブジェクト図}{oo03-Shooting3-Object.eps}
+			
+	\clearpage			
+	\subsection{シューティングゲーム（３）（シューティングゲーム（２＋継承）}
+			\code{oo03/src_shooting}{ShootingGame3}
+			\code{oo03/src_shooting}{ShootingCharacter}
+			\code{oo03/src_shooting}{PlayerAircraft}
+			\code{oo03/src_shooting}{EnemyAircraft}
+			\code{oo03/src_shooting}{Bullet}
+\clearpage			
+\section{クラス図記述練習：オブプロクエスト２}
+	\subsection{設計}
+		設計図を書くのが課題になります．
+	\subsection{実装コード}		
+		\code{oo03/src_obproquest}{ObproQuest2}
+		\code{oo03/src_obproquest}{AbstractCharacter}
+		\code{oo03/src_obproquest}{PlayerCharacter}
+		\code{oo03/src_obproquest}{EnemyCharacter}

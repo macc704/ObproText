@@ -1,0 +1,75 @@
+\chapter{オブジェクト指向の基本：クラス/インスタンスとデータ抽象の概念}
+
+\section*{学習内容}
+ \begin{itemize}
+   \item クラス，インスタンスの仕組みを理解する
+   \item 描画ライブラリを用いたGUIの仕組みを理解する
+ \end{itemize}
+\clearpage
+
+\section{講義資料}
+\ppt{oo01/lecture/OO01_01.eps}
+\pptx{oo01/lecture/OO01_02.eps}
+\pptx{oo01/lecture/OO01_03.eps}
+
+\clearpage
+\section{クラスを利用したデータの合成とプログラム実行過程}
+	\subsection{Pointクラスの作成とインスタンス化}
+		\code{oo01/src_examples}{OOTraceSample}		
+		\code{oo01/src_examples}{Point}
+
+\clearpage		
+	\subsection{プログラムの実行過程（トレース表）}
+		\diagram{scale=0.45}{トレース表(その1)}{oo01-trace1.eps}
+		\clearpage
+		\diagram{scale=0.45}{トレース表(その2)}{oo01-trace2.eps}
+		\clearpage
+		\diagram{scale=0.45}{トレース表(その3)}{oo01-trace3.eps}	
+		\clearpage
+
+\section{オブプロGUIライブラリを利用したアニメーション}
+	\subsection{例題（１）：ウインドウの出し方と描画の方法}
+		\hcp{scale=0.8}{oo01/GUISample1_main.eps}	
+		\clearpage
+		\code{oo01/src_examples}{GUISample1}
+	
+	\subsection{例題（２）：アニメーションの実装}
+		\hcp{scale=0.8}{oo01/GUISample2_main.eps}
+		\clearpage
+		\code{oo01/src_examples}{GUISample2}			
+\clearpage
+\section{クラスを用いたデータ抽象とそのプログラム}
+	\subsection{四角形のアニメーション（設計）}
+		\hcp{scale=0.8}{oo01/RectangleAnimation_main.eps}	
+ 	\clearpage
+ 			
+	\subsection{四角形のアニメーション（１）（べた書き）}
+		\code{oo01/src_rectangles}{RectangleAnimation1}
+
+	\clearpage
+	\subsection{四角形のアニメーション（２）（メソッド化）}
+		\code{oo01/src_rectangles}{RectangleAnimation2}
+
+	\clearpage
+	\subsection{四角形のアニメーション（３）（データオブジェクト）}
+		\code{oo01/src_rectangles}{RectangleAnimation3}
+		\code{oo01/src_rectangles}{RectangleData}
+
+	\clearpage
+	\subsection{四角形のアニメーション（４）（カプセル化）}
+		\code{oo01/src_rectangles}{RectangleAnimation4}
+		\code{oo01/src_rectangles}{CapsuledRectangle}
+
+	\clearpage
+	\subsection{四角形のアニメーション（５）（コンストラクタ＆フレームワークを意識したメソッド化）}
+		\code{oo01/src_rectangles}{RectangleAnimation5}
+		\code{oo01/src_rectangles}{Rectangle}
+		
+\clearpage
+\section{練習問題：バスのシミュレーション}
+		\code{oo01/src_bus}{BusSimulatorSample}
+\clearpage
+		\code{oo01/src_bus}{Passenger}
+		\code{oo01/src_bus}{Bus}
+		\code{oo01/src_bus}{BusStop}
+

@@ -1,0 +1,36 @@
+\title 複数の三角形の面積を求めるプログラム
+\version 1.0
+\author 杉浦　学
+\date 2004/12/04
+\module MAIN
+#\note 構造化プログラム設計図法SPD p35をレビューして改変
+
+\space
+\space
+\space
+\space
+\space
+\space
+\data 三角形の情報
+	\data 底辺
+	\data 高さ
+\space
+\space
+\space
+\space
+\space
+\data 面積
+
+三角形の面積を求める
+	\r 三角形の面積を求める
+		三角形の情報を読み込む \out 三角形の情報
+			\branch 三角形の情報が終わり
+				\return
+			底辺を読み込む
+			高さを読み込む
+		\ec 読み込んだ三角形が面積を持つか調べる \in 三角形の情報
+			\branch 読み込んだ三角形が面積を持たない場合
+				エラーメッセージを表示する
+				\ex
+		三角形の面積を計算する \in 三角形の情報, \out 面積
+		三角形の面積を表示する \in 面積

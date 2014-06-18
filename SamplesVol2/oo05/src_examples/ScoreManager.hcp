@@ -1,0 +1,71 @@
+\title 成績管理アプリケーション
+
+\module main
+\rdata 成績
+	\data 点数
+	\data 名前(Ver.3)
+
+成績を管理する
+	アプリケーションの開始を知らせる
+	成績を管理する
+		成績データを初期化する
+		\r 成績を管理する
+			コマンドの入力を受け取る
+			\s コマンドを実行する
+				\b 追加
+					\cm addScore \out 成績
+				\b 削除
+					\cm deleteScore \out 成績
+				\b 検索
+					\cm searchScore \in 成績
+				\b 表示
+					\cm showStatus \in 成績
+	アプリケーションの終了を知らせる
+
+\module	addScore
+\rdata 成績
+	\data 点数
+	\data 名前(Ver.3)
+
+成績を追加する
+	成績の入力を受け取る
+	成績を追加する
+		追加する場所を決める \in 成績
+		成績を追加する \out 成績
+	追加結果を出力する
+
+\module deleteScore
+\rdata 成績
+	\data 点数
+	\data 名前(Ver.3)
+
+成績を削除する
+	削除対象の入力を受け取る
+	成績を削除する
+		成績を削除する \out 成績
+		\r 削除したデータより後のデータをつめる \in 成績 \out 成績
+	削除結果を出力する
+
+\module searchScore
+\rdata 成績
+	\data 点数
+	\data 名前(Ver.3)
+
+検索する
+	検索対象の入力を受け取る
+	\r 検索する \in 成績
+	検索結果を出力する
+
+\module	showStatus
+\rdata 成績
+	\data 点数
+	\data 名前(Ver.3)
+
+成績一覧と平均点を表示する	 
+	\r 成績一覧を表示する \in 成績
+		成績を出力する
+	平均点を表示する
+		平均点を計算する
+			\r 合計点を計算する \in 成績
+			平均点を計算する
+		平均点を出力する

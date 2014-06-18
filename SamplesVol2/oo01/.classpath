@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src_examples"/>
+	<classpathentry kind="src" path="src_questions"/>
+	<classpathentry kind="src" path="src_rectangles"/>
+	<classpathentry kind="src" path="src_bus"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="OBPRO_LIB"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,60 @@
+\chapter{オブジェクト指向設計の神髄：フレームワークとコンポーネント}
+
+\section*{学習内容}
+ \begin{itemize}
+   \item オブジェクト指向フレームワークの設計について理解する   
+ \end{itemize}
+\clearpage
+
+\section{講義資料}
+\ppt{oo06/lecture/OO06_01.eps}
+\pptx{oo06/lecture/OO06_02.eps}
+
+\clearpage
+\section{ＣＵＩアプリケーションフレームワーク}
+		\subsection{２つのアプリケーションの抽象化}
+			%\subsubsection{成績管理アプリケーション}
+				\hcp{scale=0.8}{oo06/ScoreManager_main.eps}	
+			%\subsubsection{作文さんアプリケーション}
+			\newpage
+				\hcp{scale=0.8}{oo06/Sakubun_main.eps}	
+			%\subsubsection{抽象CUIアプリケーション}
+				\hcp{scale=0.8}{oo06/Framework_main.eps}
+					
+\clearpage	
+		\subsection{CUIアプリケーションフレームワークの構築}	
+			\diagram{scale=0.75}{CUIアプリケーションフレームワーククラス図}{oo06-CUIFW.eps}	
+			\code{oo06/src_examples}{CUIApplicationEngine}
+			\code{oo06/src_examples}{AbstractCUIApplication}
+
+		\subsection{適用例(1) 成績管理アプリケーション}
+			\code{oo06/src_examples}{ScoreManagerApplication}
+			\code{oo06/src_examples}{Score}
+			
+		\subsection{適用例(2)作文さんアプリケーション}
+			%\subsubsection{作文さんアプリケーション（抽象ＣＵＩアプリケーションクラスを継承）}
+			\code{oo06/src_examples}{SakubunApplication}
+\clearpage		
+\section{GUIアニメーションアプリケーションフレームワーク}
+	\subsection{GUIアプリケーションフレームワークの検討}
+		\hcp{scale=0.8}{oo01/RectangleAnimation_main.eps}
+		\hcp{scale=0.8}{oo06/GUIFramework_main.eps}
+\clearpage				
+	\subsection{GUIアプリケーションフレームワークの構築}	
+		\diagram{scale=0.75}{GUIアプリケーションフレームワーククラス図}{oo06-GUIFW.eps}	
+		\code{oo06/src_shooting}{GUIAnimationApplicationEngine}
+		\code{oo06/src_shooting}{AbstractGUIAnimationApplication}
+
+	\subsection{適用例：シューティングゲーム}
+			\subsubsection{シューティングゲーム（６）（フレームワークのコンポーネントとする）}
+フレームワークを利用したShootingGame6です．
+紙面の都合でShootingGame6クラス以外のソースコードを割愛します．			
+				\code{oo06/src_shooting}{ShootingGame6}
+% 				\code{oo06/src_shooting}{AnimationElement}
+% 				\code{oo06/src_shooting}{Background}
+% 				\code{oo06/src_shooting}{Character}
+% 				\code{oo06/src_shooting}{PlayerAircraft}
+% 				\code{oo06/src_shooting}{EnemyAircraft}
+% 				\code{oo06/src_shooting}{Bullet}
+% 				\code{oo06/src_shooting}{Option}
+% 				\code{oo06/src_shooting}{ScoreBoard}

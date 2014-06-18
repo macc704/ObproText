@@ -1,0 +1,74 @@
+\chapter{データ抽象応用：合成・リスト・ライブラリ}
+
+\section*{学習内容}
+ \begin{itemize}
+   \item 合成による設計について理解する
+   \item リスト（集合）の設計について理解する
+   \item Javaライブラリの設計思想を理解し，使えるようになる
+ \end{itemize}
+\clearpage
+
+
+\section{講義資料}
+\ppt{oo05/lecture/OO05_01.eps}
+\pptx{oo05/lecture/OO05_02.eps}
+\pptx{oo05/lecture/OO05_03.eps}
+
+\clearpage
+\section{合成によるリストの作成}
+			\subsection{継承の問題点}
+				\diagram{scale=0.75}{アラーム付き時計設計例}{oo05-Alarm.eps}	
+
+\clearpage	
+			\subsection{成績管理アプリケーションオブジェクト指向版の設計}
+				\diagram{scale=0.75}{クラス図}{oo05-Score1-Class.eps}	
+				\diagram{scale=0.75}{オブジェクト図}{oo05-Score1-Object.eps}			
+				\hcp{scale=0.7}{oo05/ScoreManager_main.eps}
+
+\clearpage	
+			\subsection{成績管理アプリケーション（１）}
+				\code{oo05/src_examples}{ScoreManagerOO1}
+				\code{oo05/src_examples}{Score}
+
+\clearpage	
+			\subsection{成績管理アプリケーション（２）（配列隠蔽・リスト導入）}
+				\diagram{scale=0.75}{リストを導入したクラス図}{oo05-Score-List.eps}
+				\code{oo05/src_examples}{ScoreManagerOO2}
+				\code{oo05/src_examples}{ScoreList}
+
+				\subsubsection{可変長リストの実装}
+				\code{oo05/src_examples}{UnlimitedScoreList}
+
+\clearpage	
+			\subsection{成績管理アプリケーション（３）（汎用リスト）}
+				\diagram{scale=0.75}{汎用リストを導入したクラス図}{oo05-Score-ObjectList.eps}			
+				\code{oo05/src_examples}{ScoreManagerOO3}
+				\code{oo05/src_examples}{ObjectList}
+
+\clearpage					
+				\subsubsection{連結リストによる実装}
+				\diagram{scale=0.75}{連結リストを導入したクラス図}{oo05-Score-SuperList.eps}				
+				\code{oo05/src_examples}{ObjectLinkedList}
+
+\clearpage											
+			\subsection{成績管理アプリケーション（４）（Javaライブラリ使用版）}
+				\code{oo05/src_examples}{ScoreManagerOO4}
+								
+\clearpage	
+\section{シューティングゲームへの適用例}
+%		\subsection{設計}			
+			%\diagram{scale=0.75}{クラス図２}{oo05-Shooting.eps}
+				
+		\subsection{シューティングゲーム（５）（リスト導入・オプション導入）}
+
+リストを導入し，gキーでオプションが出現するように設計したのが
+ShootingGame5です．紙面の都合でMainクラスと新しいクラスであるOption以外ソースコードを割愛します．
+
+ 			\code{oo05/src_shooting}{ShootingGame5}
+% 			\code{oo05/src_shooting}{AnimationElement}
+% 			\code{oo05/src_shooting}{Background}
+% 			\code{oo05/src_shooting}{ShootingCharacter}
+% 			\code{oo05/src_shooting}{PlayerAircraft}
+% 			\code{oo05/src_shooting}{EnemyAircraft}
+% 			\code{oo05/src_shooting}{Bullet}
+ 			\code{oo05/src_shooting}{Option}
